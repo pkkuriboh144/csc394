@@ -1,0 +1,802 @@
+<!-- Computer Science Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+      $(function() {
+
+      $('#login-form-link').click(function(e) {
+      $("#login-form").delay(100).fadeIn(100);
+      $("#register-form").fadeOut(100);
+      $('#register-form-link').removeClass('active');
+      $(this).addClass('active');
+      e.preventDefault();
+    });
+    $('#register-form-link').click(function(e) {
+      $("#register-form").delay(100).fadeIn(100);
+      $("#login-form").fadeOut(100);
+      $('#login-form-link').removeClass('active');
+      $(this).addClass('active');
+      e.preventDefault();
+    });
+
+  });
+    </script>
+
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+ 
+    <style> {
+    padding-top: 90px;
+    }
+    .panel-login {
+        border-color: #ccc;
+      -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    }
+    .panel-login>.panel-heading {
+      color: #00415d;
+      background-color: #fff;
+      border-color: #fff;
+      text-align:center;
+    }
+    .panel-login>.panel-heading a{
+      text-decoration: none;
+      color: #666;
+      font-weight: bold;
+      font-size: 15px;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      transition: all 0.1s linear;
+    }
+    .panel-login>.panel-heading a.active{
+      color: #029f5b;
+      font-size: 18px;
+    }
+    .panel-login>.panel-heading hr{
+      margin-top: 10px;
+      margin-bottom: 0px;
+      clear: both;
+      border: 0;
+      height: 1px;
+      background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+      background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+      background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+      background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    }
+    .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+      height: 45px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      transition: all 0.1s linear;
+    }
+    .panel-login input:hover,
+    .panel-login input:focus {
+      outline:none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      border-color: #ccc;
+    }
+    .btn-login {
+      background-color: #59B2E0;
+      outline: none;
+      color: #fff;
+      font-size: 14px;
+      height: auto;
+      font-weight: normal;
+      padding: 14px 0;
+      text-transform: uppercase;
+      border-color: #59B2E6;
+    }
+    .btn-login:hover,
+    .btn-login:focus {
+      color: #fff;
+      background-color: #53A3CD;
+      border-color: #53A3CD;
+    }
+    .forgot-password {
+      text-decoration: underline;
+      color: #888;
+    }
+    .forgot-password:hover,
+    .forgot-password:focus {
+      text-decoration: underline;
+      color: #666;
+    }
+
+    .btn-register {
+      background-color: #1CB94E;
+      outline: none;
+      color: #fff;
+      font-size: 14px;
+      height: auto;
+      font-weight: normal;
+      padding: 14px 0;
+      text-transform: uppercase;
+      border-color: #1CB94A;
+    }
+    .btn-register:hover,
+    .btn-register:focus {
+      color: #fff;
+      background-color: #1CA347;
+      border-color: #1CA347;
+    } 
+    </style>
+
+
+    <title>Computer Science</title>
+
+  </head>
+      <!--Depaul Banner -->
+      <img src='https://quikpayasp.com/depaul/quikpay/etc/image/upload/DePaul%20banner_1280.jpg' height=" "100%" width="100%"class='img-responsive'/>
+
+  <!-- Nav bar start here -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">Home</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+            <!-- <li class="active"><a href="#">Courses <span class="sr-only">(current)</span></a></li> -->
+
+
+            <!-- <li><a href="/list">Curriculum</a></li> -->
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Curriculum<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/cslist">Computer Science</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/islist">Information System</a></li>
+              </ul>
+            </li>
+          </ul>
+<!-- remove search option
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+
+-->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/logout">Logout</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="/home">Profile</a></li>
+               
+
+              </ul>
+            </li>
+          </ul>
+
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+    <ul style = "list-style-type: none">
+      <div class="container">
+    <center><h2>Master of Science: Computer Science</h2></center>
+    <br>
+    <!-- FIXED ISSUE-->
+    <center><img src='http://www.cdm.depaul.edu/academics/PublishingImages/heroMSCS.jpg' class='img-responsive'/></center>
+    <br>
+    <b>Overview</b>
+    <br>
+    <br>
+    <p>DePaul's graduate Computer Science program is the premier training ground for computing professionals in the Chicago area. 
+    Unlike a certificate program, our master's courses focus on fundamental concepts that remain constant, 
+    even as technology changes rapidly. Unlike more research focused institutions, however, 
+    our courses emphasize the programmatic application of these fundamental concepts. 
+    Students interested in research will find an abundance of advanced topics --- medical imaging, 
+    data mining, algorithmic analysis, and scientific computing, to name a few.</p>
+    <b><p>Degree Requirements:</p></b>
+    <ul>
+      <li>Complete a minimum of 52 graduate credit hours in addition to any required introductory courses of the designated degree program.</li>
+      <li>Complete all graduate courses and requirements listed in the designated degree program.</li>
+      <li>Earn a grade of C- or better in all courses of the designated degree program.</li>
+      <li>Maintain a cumulative GPA of 2.5 or higher.</li>
+      <li>Students pursuing a second (or more) graduate degree may not double count or retake any course that applied toward the completion of a prior graduate degree. If a required course in the second degree was already completed and applied toward a previous degree, the student must meet with a faculty advisor to discuss a new course to be completed and substituted in the new degree. This rule also applies to cross-listed courses, which are considered to be the same course but offered under different subjects.</li>
+      <li> Students pursuing a second master's degree must complete a minimum of 52 graduate credit hours beyond their first designated degree program in addition to any required introductory courses in their second designated degree program.</li>
+      <br>
+      <br>
+       <a href="http://www.cdm.depaul.edu/academics/Pages/MSInComputerScience.aspx" class="btn btn-default" >More Information</a>
+    </ul>
+
+    <br>
+    <br>
+    <br> 
+    
+    <h2>Standard Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Standard" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Software & Systems Development Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Software and Systems Development" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Theory Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Theory" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Data Science Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Data Science" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Database Systems Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Database Systems" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Artificial Intelligence Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Artificial Intelligence" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Software Engineering Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Software Engineering" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+    <h2>Multimedia Courses</h2>
+          
+        <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th>Course ID</th>
+          <th>Course Name</th>
+          <th>Pre-req</th>
+          <th>Concentration</th>
+          <th>Class Type</th>
+          <th>Fall</th>
+          <th>Winter</th>
+          <th>Spring</th>
+          <th>Summer</th>
+          <th>Online</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for obj in object_list %}
+      {% if "Multimedia" in obj.cs_cons %}
+          <tr>
+          <td><a href='/csdetail/{{obj.id}}'>{{obj.course_id}}</a></br></td>
+          <td>{{obj.course_name}}</br></td>
+          <td>{{obj.pre_req}}</br></td>
+          <td>{{obj.cs_cons}}</br></td>
+      {% if obj.cs_class_type in "1" %}
+          <td>{{"Intro"}}</br></td>
+      {% elif obj.cs_class_type in "2" %}
+          <td>{{"Foundation"}}</br></td>
+      {% elif obj.cs_class_type in "3" %}
+          <td>{{"Advanced"}}</br></td>
+      {% elif obj.cs_class_type in "4" %}
+          <td>{{"Major Elective"}}</br></td>
+      {% else %}
+          <td>{{"Capstone"}}</br></td>
+      {% endif %}
+          {% if obj.fall is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.winter is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.spring is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.summer is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          {% if obj.online is True %}
+          <td>{{"✔"}}</br></td>
+      {% else %}
+      <td>{{"✖"}}</br></td>
+      {% endif %}
+          </tr>
+      {% endif %}
+        {% endfor %}
+        </tbody>
+        </table>
+    
+      </div>
+          </br><br>
+      </ul>
+
+
+    </div>
+  </div>
+
+   <!-- footer -->
+  <div id="footer">
+    <center><h5>DePaul University</h5></center>
+    <center><h5>College of Computing and Digital Media </h5></center>
+    <h5><p><center> Address: 243 South Wabash Avenue, Chicago, IL-60604 | &#9742: 312-362-8381</center></p></h5>
+    <h5><p><center>Designed and built by Team 7 Copyright &copy; 2017-2018</center></p></h5>
+</div>
+
+  </body>
+
+</html>
